@@ -7,6 +7,7 @@
     "build": "tsc",
     "start": "yarn build && node dist/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "test:functional": "jest --projects ./test --runInBand",
     "lint": "eslint ./src/ ./test --ext .ts",
     "lint:fix": "eslint ./src/ ./test --ext .ts --fix",
     "start:dev": "ts-node-dev 'src/index.ts'"
@@ -21,17 +22,28 @@
     "api"
   ],
   "author": "Leticia Silverio // Copied Waldemar Neto",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/devLeSilverio/Node_Typescript_API-Surfers/issues"
   },
   "homepage": "https://github.com/devLeSilverio/Node_Typescript_API-Surfers#readme",
   "dependencies": {
+    "@overnightjs/core": "^1.7.5",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.19",
     "@types/module-alias": "^2.0.0",
     "@types/node": "^14.14.13",
+    "@types/supertest": "^2.0.10",
+    "@typescript-eslint/eslint-plugin": "^2.29.0",
     "@typescript-eslint/parser": "^4.9.1",
     "eslint": "^7.15.0",
-    "module-alias": "^2.2.2",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.4.4",
+    "ts-node-dev": "^1.0.0-pre.47",
     "typescript": "^4.1.3"
   }
 }
